@@ -88,3 +88,9 @@
 [submodule ".vim/bundle/Specky"]
 	path = .vim/bundle/Specky
 	url = git@github.com:vim-scripts/Specky.git
+[submodule ".vim/bundle/vim-indexed-search"]
+	path = .vim/bundle/vim-indexed-search
+	url = git@github.com:henrik/vim-indexed-search.git
+[submodule ".vim/bundle/jQuery"]
+	path = .vim/bundle/jQuery
+	url = git@github.com:vim-scripts/jQuery.git
