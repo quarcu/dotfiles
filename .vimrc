@@ -7,6 +7,25 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+let s:OS = 'linux'
+
+let os = substitute(system('uname'), '\n', '', '')
+if os == 'Darwin' || os == 'Mac'
+  let s:OS = 'osx'
+endif
+
+" Use backups
+" Source:
+" http://stackoverflow.com/a/15317146
+set backup
+set writebackup
+set backupdir=~/.vim/backup//
+
+" Use a specified swap folder
+" Source:
+" http://stackoverflow.com/a/15317146
+set directory=~/.vim/swap//
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
