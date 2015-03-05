@@ -63,3 +63,7 @@ Session.vim
 .netrwhist
 *~
 
+### Vim swap and backup designated directories ###
+.vim/backup/*
+.vim/swap/*
+
