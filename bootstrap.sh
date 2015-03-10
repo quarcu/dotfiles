@@ -1,6 +1,8 @@
 #!/bin/bash
 
-ln -s "${ZDOTDIR:-$HOME}"/Projects/dotfiles "${ZDOTDIR:-$HOME}"/dotfiles
+current_dir=`pwd`
+
+ln -s $current_dir "${ZDOTDIR:-$HOME}"/dotfiles
 ln -s "${ZDOTDIR:-$HOME}"/dotfiles/.zprezto "${ZDOTDIR:-$HOME}"/.zprezto
 
 setopt EXTENDED_GLOB
