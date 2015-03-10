@@ -35,7 +35,8 @@ else
   set backup    " keep a backup file
 endif
 
-set ruler       " show the cursor position all the time
+set ruler          " show the cursor position all the time
+set laststatus=2   " last window always has a statusline
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
