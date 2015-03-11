@@ -64,6 +64,6 @@ Session.vim
 *~
 
 ### Vim swap and backup designated directories ###
-.vim/backup/*
-.vim/swap/*
+vim/backup/*
+vim/swap/*
 
