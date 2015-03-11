@@ -55,9 +55,15 @@ set number
 nnoremap <F5> :GundoToggle<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
+if has("autocmd")
+  autocmd User fugitive 
+    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+    \   nnoremap <buffer> .. :edit %:h<CR> |
+    \ endif
+autocmd BufReadPost fugitive://* set bufhidden=delete
+endif
 
 set shiftwidth=2 tabstop=2 expandtab
-
 
 set background=dark
 let g:solarized_termcolors=256
