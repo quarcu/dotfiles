@@ -53,11 +53,16 @@ execute pathogen#infect()
 filetype plugin indent on
 set number
 
+"---------- Key remaps -------------
 " In case of issues
 " ImportError: No module named site
 " Reinstall Vim / MacVim
 nnoremap <F5> :GundoToggle<CR>
 nmap <C-n> :NERDTreeToggle<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
 
 if has("autocmd")
   autocmd User fugitive 
@@ -66,6 +71,8 @@ if has("autocmd")
     \ endif
 autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
+
+"------------ END key remaps -------
 
 set shiftwidth=2 tabstop=2 expandtab
 
