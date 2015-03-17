@@ -21,6 +21,9 @@ set backup
 set writebackup
 set backupdir=~/.vim/backup//
 
+" Don’t create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
+
 " Use a specified swap folder
 " Source:
 " http://stackoverflow.com/a/15317146
@@ -75,6 +78,10 @@ endif
 "------------ END key remaps -------
 
 set shiftwidth=2 tabstop=2 expandtab
+" Highlight current line
+set cursorline
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
 set background=dark
 let g:solarized_termcolors=256
