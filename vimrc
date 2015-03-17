@@ -57,6 +57,15 @@ filetype plugin indent on
 set number
 
 "---------- Key remaps -------------
+" Strip trailing whitespace (,ss)
+function! StripWhitespace()
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
 " In case of issues
 " ImportError: No module named site
 " Reinstall Vim / MacVim
@@ -68,11 +77,12 @@ nmap <C-n> :NERDTreeToggle<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 
 if has("autocmd")
-  autocmd User fugitive 
+  autocmd User fugitive
     \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
     \   nnoremap <buffer> .. :edit %:h<CR> |
     \ endif
-autocmd BufReadPost fugitive://* set bufhidden=delete
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+  autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
 "------------ END key remaps -------
