@@ -1,0 +1,17 @@
+#!/bin/bash
+net.inet.ip.fw.verbose=1
+net.inet.ip.fw.verbose_limit=65535
+net.inet.icmp.icmplim=1024
+net.inet.icmp.drop_redirect=1
+net.inet.icmp.log_redirect=1
+net.inet.ip.redirect=0
+net.inet.ip.sourceroute=0
+net.inet.ip.accept_sourceroute=0
+net.inet.icmp.bmcastecho=0
+net.inet.icmp.maskrepl=0
+net.inet.tcp.delayed_ack=0
+net.inet.ip.forwarding=0
+net.inet.tcp.strict_rfc1948=1
+
+ulimit -S -n 4096
+
