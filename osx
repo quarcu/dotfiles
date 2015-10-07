@@ -620,8 +620,14 @@ EOD
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Reuse previous session directory
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Custom Directory' Recycle" ~/Library/Preferences/com.googlecode.iTerm2.plist
+
 # Unlimited Scrollback
 /usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Unlimited Scrollback' true" ~/Library/Preferences/com.googlecode.iTerm2.plist
+
+# Show tab bar in FullScreen
+defaults write com.googlecode.iterm2 ShowFullScreenTabBar -bool true
 
 ###############################################################################
 # Time Machine                                                                #
