@@ -620,6 +620,9 @@ EOD
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Unlimited Scrollback
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Unlimited Scrollback' true" ~/Library/Preferences/com.googlecode.iTerm2.plist
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
