@@ -51,3 +51,4 @@ thread_safe
 tzinfo
 unf
 vcloud-rest
+terminal-notifier
