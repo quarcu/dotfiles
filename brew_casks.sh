@@ -54,6 +54,8 @@ apps=(
   vlc
   waterfox
   webpquicklook
+  dash
+  cyberduck
 )
 
 # Install apps to /Applications
