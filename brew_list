@@ -120,6 +120,7 @@ binaries=(
   zeromq
   zsh
   zsh-completions
+  duck
 )
 
 echo "installing binaries..."
