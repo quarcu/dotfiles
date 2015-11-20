@@ -1,4 +1,6 @@
 vagrant-cachier
 vagrant-hosts
+vagrant-proxyconf
 vagrant-share
 vagrant-vbguest
+
